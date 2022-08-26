@@ -402,6 +402,13 @@ function astronvim.status.components.nav(opts)
   return astronvim.status.components.builder(opts)
 end
 
+function astronvim.status.components.breadcrumbs(opts)
+  return {
+    init = astronvim.status.init.breadcrumbs(opts),
+    condition = astronvim.status.condition.aerial_available,
+  }
+end
+
 --- A general function to build a section of astronvim status providers with highlights and conditions
 -- @param opts a list of components to build into a section
 -- @return The Heirline init function

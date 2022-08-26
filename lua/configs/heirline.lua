@@ -229,13 +229,6 @@ function astronvim.status.components.lsp()
   }
 end
 
-function astronvim.status.components.breadcrumbs()
-  return {
-    init = astronvim.status.init.breadcrumbs { padding = { left = 1 } },
-    condition = astronvim.status.condition.aerial_available,
-  }
-end
-
 function astronvim.status.components.treesitter()
   return {
     condition = astronvim.status.condition.treesitter_available,
@@ -267,7 +260,7 @@ local heirline_opts = astronvim.user_plugin_opts("plugins.heirline", {
       condition = function() return conditions.buffer_matches { buftype = { "terminal" } } end,
       init = function() vim.opt_local.winbar = nil end,
     },
-    { condition = conditions.is_active, astronvim.status.components.breadcrumbs() },
+    { condition = conditions.is_active, astronvim.status.components.breadcrumbs { padding = { left = 1 } } },
     { astronvim.status.components.filename() },
   },
 })
