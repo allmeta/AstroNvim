@@ -98,7 +98,40 @@ local config = {
     ["nvim-lsp-installer"] = {
       ensure_installed = { "sumneko_lua" },
     },
+    telescope={
+      defaults = {
+        prompt_prefix = "  ",
+        borderchars = {
+          prompt = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+          results = { "─", "▐", "─", "│", "╭", "▐", "▐", "╰" },
+          preview = { " ", "│", " ", "▌", "▌", "╮", "╯", "▌" },
+        },
+        selection_caret = "  ",
+        layout_config = {
+          width = 0.90,
+          height = 0.85,
+          preview_cutoff = 120,
+          horizontal = {
+            preview_width = function(_, cols, _)
+              return math.floor(cols * 0.6)
+            end,
+          },
+          vertical = {
+            width = 0.9,
+            height = 0.95,
+            preview_height = 0.5,
+          },
+          flex = {
+            horizontal = {
+              preview_width = 0.9,
+            },
+          },
+        },
+        layout_strategy = "horizontal",
+      },
+    },
     packer = {
+      vim.cmd [[autocmd VimEnter,ColorScheme * lua require("user.theme").telescope_theme()]],
       compile_path = vim.fn.stdpath "data" .. "/packer_compiled.lua",
     },
   },
