@@ -109,6 +109,7 @@ local config = {
   telescope = {
     defaults = {
       prompt_prefix = "  ",
+      initial_mode = "normal",
       borderchars = {
         prompt = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
         results = { "─", "▐", "─", "│", "╭", "▐", "▐", "╰" },
