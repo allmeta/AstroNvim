@@ -71,7 +71,7 @@ local config = {
   -- Configure plugins
   plugins = {
     init = {
-      {'folke/tokyonight/nvim'},
+      {'folke/tokyonight.nvim'},
       ["L3MON4D3/LuaSnip"] = {disable = true},
 
     },
