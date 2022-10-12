@@ -20,7 +20,7 @@ local config = {
   },
 
   -- Set colorscheme to use
-  colorscheme = "tokyonight",
+  colorscheme = "tokyonight-night",
 
   -- Override highlight groups in any theme
   highlights = {
@@ -31,7 +31,6 @@ local config = {
     opt = {
     },
     g = {
-      tokyonight_style = "night",
     },
   },
 
