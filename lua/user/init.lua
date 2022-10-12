@@ -60,9 +60,8 @@ local config = {
 
   mappings = {
     n = {
-      ["<leader>bb"] = { "<cmd>tabnew<cr>", desc = "New tab" },
-      ["<leader>bc"] = { "<cmd>BufferLinePickClose<cr>", desc = "Pick to close" },
-      ["<leader>bj"] = { "<cmd>BufferLinePick<cr>", desc = "Pick to jump" },
+      ["<leader>bn"] = { "<cmd>BufferLineCycleNext<cr>", desc = "Buffer next" },
+      ["<leader>bp"] = { "<cmd>BufferLineCyclePrev<cr>", desc = "Buffer prev" },
     },
     t = {
     },
