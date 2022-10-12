@@ -57,6 +57,12 @@ local config = {
     virtual_text = false,
     underline = true,
   },
+  lsp = {
+    formatting = {
+      format_on_save = false
+    }
+
+  },
 
   mappings = {
     n = {
